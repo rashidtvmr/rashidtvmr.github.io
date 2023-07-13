@@ -3,7 +3,7 @@ name: Deploy Astro Site
 on:
   push:
     branches:
-      - main # Change this to your main branch name
+      - gh-pages # Change this to your main branch name
 
 jobs:
   build-and-deploy:
