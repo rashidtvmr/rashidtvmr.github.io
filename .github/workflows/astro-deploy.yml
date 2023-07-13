@@ -25,9 +25,6 @@ jobs:
       - name: Build Astro site
         run: yarn build
 
-      - name: Move build files to docs folder
-        run: mv dist docs
-
       - name: Deploy to hosting provider
         uses: peaceiris/actions-gh-pages@v3
         with:
