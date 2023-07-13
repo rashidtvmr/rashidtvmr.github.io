@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
-import { Icon } from "astro-icon";
+import Icon from "../components/Icon.astro";
 ---
 
 <BaseLayout
@@ -48,7 +48,7 @@ import { Icon } from "astro-icon";
 			<section>
 				<h2 class="section-title">Education</h2>
 				<div class="content">
-					<p>MASTER OF SCIENCE Computer Science</p>
+					<p>M.Sc in Computer Science</p>
 				</div>
 			</section>
 			<section>
@@ -57,8 +57,7 @@ import { Icon } from "astro-icon";
 					<p>
 						<section class="resume-section" id="skills">
 							<div class="resume-section-content">
-								<h2 class="mb-5">Skills</h2>
-								<div class="flex my-10">
+								<!-- <div class="flex my-10">
 									<Icon
 										name="ph:file-js-bold"
 										class="w-5 h-5 text-red"
@@ -103,16 +102,14 @@ import { Icon } from "astro-icon";
 										name="ph:database-bold"
 										class="w-5 h-5 text-red"
 									/>
-								</div>
+								</div> -->
 								<!-- <div class="subheading mb-3"></div> -->
-								<ul class="fa-ul mb-0">
+								<ul class="list-decimal">
 									<li>
-										<span class="fa-li"
-											><i class="fas fa-laptop-code"
-											></i></span
-										>
-										Web Application using
-										<ul>
+										<div class="flex">
+											Web Application using
+										</div>
+										<ul class="ps-10 list-disc">
 											<li>
 												MERN stack (MongoDB, ExpressJS,
 												ReactJS and NodeJS)
@@ -143,11 +140,8 @@ import { Icon } from "astro-icon";
 										</ul>
 									</li>
 									<li>
-										<span class="fa-li"
-											><i class="fas fa-mobile"></i></span
-										>
 										Mobile Application using
-										<ul>
+										<ul class="ps-10 list-disc">
 											<li>React-Native</li>
 											<li>Flutter</li>
 											<li>Capacitor or Apache cordova</li>
@@ -194,12 +188,8 @@ import { Icon } from "astro-icon";
 										Google APIs
 									</li>
 									<li>
-										<span class="fa-li"
-											><i class="fas fa-cloud-upload-alt"
-											></i></span
-										>
 										Application deployment experience in
-										<ul>
+										<ul class="ps-10 list-disc">
 											<li>AWS</li>
 											<li>Vercel</li>
 											<li>Cloudflare</li>
