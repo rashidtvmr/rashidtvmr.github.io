@@ -39,9 +39,9 @@ const matter = require('gray-matter');
       title: "Maxime Heckel's Blog",
       description:
         "Hi I'm Maxime, and this is my blog. Here, I share through my writing my experience as a frontend engineer and everything I'm learning about on React, Typescript, SwiftUI, Serverless, and testing.",
-      site_url: 'https://blog.maximeheckel.com',
-      feed_url: 'https://blog.maximeheckel.com/rss.xml',
-      image_url: 'https://blog.maximeheckel.com/static/og/main-og-image.png',
+      site_url: 'https://rashidtvmr.com',
+      feed_url: 'https://rashidtvmr.com/rss.xml',
+      image_url: 'https://rashidtvmr.com/static/og/main-og-image.png',
       language: 'en',
     });
 
@@ -50,7 +50,7 @@ const matter = require('gray-matter');
     );
 
     content.forEach((post) => {
-      const url = `https://blog.maximeheckel.com/posts/${post.slug}`;
+      const url = `https://rashidtvmr.com/posts/${post.slug}`;
 
       feed.item({
         title: post.title,

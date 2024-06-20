@@ -39,7 +39,7 @@ describe('Search tests', () => {
     cy.intercept('POST', '/api/semanticsearch', [
       {
         title: 'Migrating to Next.js',
-        url: 'https://blog.maximeheckel.com/posts/migrating-to-nextjs/',
+        url: 'https://rashidtvmr.com/posts/migrating-to-nextjs/',
       },
     ]).as('semanticSearch');
 

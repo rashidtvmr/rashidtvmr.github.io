@@ -19,7 +19,7 @@ type: 'blogPost'
 featured: false
 ---
 
-This blog post is a follow up to [Switching off the lights - Adding dark mode to your React app](https://blog.maximeheckel.com/posts/switching-off-the-lights-adding-dark-mode-to-your-react-app-with-context-and-hooks-f41da6e07269) that I wrote a year ago. I finally took the time to fix my implementation which caused a lot of issues on server rendered websites and I wanted to share my solution with you.
+This blog post is a follow up to [Switching off the lights - Adding dark mode to your React app](https://rashidtvmr.com/posts/switching-off-the-lights-adding-dark-mode-to-your-react-app-with-context-and-hooks-f41da6e07269) that I wrote a year ago. I finally took the time to fix my implementation which caused a lot of issues on server rendered websites and I wanted to share my solution with you.
 
 ## An ugly hack
 
@@ -197,7 +197,7 @@ We can add the script to the `html.js` file inside the `<body>` tag as follows:
 
 There's one last update to be done: updating the toggle light/dark mode function. We need to add a few lines of code to make sure we add or remove the appropriate CSS class from the body tag, otherwise the colors of our themes will be a bit messed up 😅.
 
-In the example featured in the [first blog post](https://blog.maximeheckel.com/posts/switching-off-the-lights-adding-dark-mode-to-your-react-app-with-context-and-hooks-f41da6e07269#theme-provider) this is what the function looked like:
+In the example featured in the [first blog post](https://rashidtvmr.com/posts/switching-off-the-lights-adding-dark-mode-to-your-react-app-with-context-and-hooks-f41da6e07269#theme-provider) this is what the function looked like:
 
 ```js title=Original function to toggle between light and dark mode
 const toggle = () => {

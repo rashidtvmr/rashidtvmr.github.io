@@ -1,6 +1,6 @@
 # blog.maximeheckel.com
 
-This is the main code base for [my blog](https://blog.maximeheckel.com).
+This is the main code base for [my blog](https://rashidtvmr.com).
 
 It's built with:
 

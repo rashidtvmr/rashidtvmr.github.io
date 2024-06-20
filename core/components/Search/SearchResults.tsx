@@ -31,7 +31,7 @@ const StaticSearchResults = (props: StaticSearchResultsProps) => {
       switch (event.key) {
         case 'Enter':
           const href = selectedResult.url.replace(
-            'https://blog.maximeheckel.com',
+            'https://rashidtvmr.com',
             ''
           );
           router.push(href).then(() => window.scrollTo(0, 0));
@@ -75,8 +75,8 @@ const StaticSearchResults = (props: StaticSearchResultsProps) => {
             results.length === 0
               ? HEIGHT
               : results.length * HEIGHT + 2 >= MAX_HEIGHT
-              ? MAX_HEIGHT
-              : results.length * HEIGHT + 2,
+                ? MAX_HEIGHT
+                : results.length * HEIGHT + 2,
           transition: 'height 0.4s ease-out',
           willChange: 'height',
         }}
@@ -90,7 +90,7 @@ const StaticSearchResults = (props: StaticSearchResultsProps) => {
             onPointerEnter={() => handlePointer(index)}
           >
             <Link
-              href={result.url.replace('https://blog.maximeheckel.com', '')}
+              href={result.url.replace('https://rashidtvmr.com', '')}
               onClick={() => setTimeout(onClose, 600)}
             >
               {result.title}
