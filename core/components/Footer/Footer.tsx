@@ -44,9 +44,9 @@ const Footer = () => (
                 <Link href="/" legacyBehavior passHref>
                   <Anchor discreet>Home</Anchor>
                 </Link>
-                <Link href="/design" legacyBehavior passHref>
+                {/* <Link href="/design" legacyBehavior passHref>
                   <Anchor discreet>Design</Anchor>
-                </Link>
+                </Link> */}
                 <Link href="/rss.xml" legacyBehavior passHref>
                   <Anchor discreet>RSS</Anchor>
                 </Link>
@@ -58,7 +58,7 @@ const Footer = () => (
               <Grid>
                 <Anchor
                   discreet
-                  href="https://twitter.com/MaximeHeckel"
+                  href="https://twitter.com/rashidtvmr"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -66,7 +66,7 @@ const Footer = () => (
                 </Anchor>
                 <Anchor
                   discreet
-                  href="https://github.com/MaximeHeckel"
+                  href="https://github.com/rashidtvmr"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -74,7 +74,7 @@ const Footer = () => (
                 </Anchor>
                 <Anchor
                   discreet
-                  href="https://www.buymeacoffee.com/maximeheckel"
+                  href="https://www.buymeacoffee.com/rashidtvmr"
                 >
                   Buy me a coffee
                 </Anchor>
@@ -82,11 +82,11 @@ const Footer = () => (
             </Text>
           </Grid.Item>
           <Grid.Item>
-            <Text size={1}>
+            {/* <Text size={1}>
               <Grid>
                 <Anchor
                   discreet
-                  href="https://maximeheckel.com"
+                  href="https://raashid.me"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -107,7 +107,7 @@ const Footer = () => (
                   Newsletter
                 </Anchor>
               </Grid>
-            </Text>
+            </Text> */}
           </Grid.Item>
         </Grid>
         <FooterContent alignItems="center" justifyContent="space-between">
@@ -118,10 +118,10 @@ const Footer = () => (
             variant="primary"
             weight="3"
           >
-            © {new Date().getFullYear()} Maxime Heckel ——{' '}
-            <EM size="1">New York</EM>
+            © {new Date().getFullYear()} Rashidtvmr ——{' '}
+            <EM size="1">Chennai, India</EM>
           </Text>
-          <Logo alt="Maxime Heckel's logo" size={35} />
+          <Logo alt="Rashidtvmr's logo" size={35} />
         </FooterContent>
       </Flex>
     </Grid>

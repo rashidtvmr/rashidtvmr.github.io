@@ -55,9 +55,9 @@ const Header = (props: HeaderProps) => {
         aria-label="Follow me on Twitter"
         title="Follow me on Twitter"
         rel="me"
-        href="https://twitter.com/MaximeHeckel"
+        href="https://twitter.com/rashidtvmr"
       >
-        @MaximeHeckel
+        @rashidtvmr
       </a>
       <Search open={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
       <HeaderWrapper
@@ -91,10 +91,10 @@ const Header = (props: HeaderProps) => {
               {title ? <HeaderTitle text={title} /> : null}
             </Flex>
             <Flex gap={3}>
-              <CommandCenterButton
+              {/* <CommandCenterButton
                 isSearchShown={isSearchOpen}
                 onClick={() => setIsSearchOpen(true)}
-              />
+              /> */}
               <LightDarkSwitcher />
             </Flex>
           </HeaderContent>

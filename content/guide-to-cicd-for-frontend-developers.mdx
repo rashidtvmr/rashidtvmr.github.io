@@ -72,7 +72,7 @@ Linting and formatting are essential to keep your codebase **consistent** and�
 
 For this step, I want my tools to be fast and reliable. It should only take **a few seconds **to lint and format my codebase. As a frontend engineer, I use
 
-- **[ESlint](https://eslint.org/)** for linting, it comes with a set of rules to write proper Javascript, and these rules can be customized to your own team's fit. Additionally, should you need something more specific, you can build your own ESLint rules, [I wrote about it here](https://rashidtvmr.com/posts/how-to-build-first-eslint-rule), it's an interesting exercise that involves Abstract Syntax Tree (AST).
+- **[ESlint](https://eslint.org/)** for linting, it comes with a set of rules to write proper Javascript, and these rules can be customized to your own team's fit. Additionally, should you need something more specific, you can build your own ESLint rules, [I wrote about it here](https://raashid.me/posts/how-to-build-first-eslint-rule), it's an interesting exercise that involves Abstract Syntax Tree (AST).
 - **[Prettier](https://prettier.io/)** for formatting. It became the defacto formatting tool for Javascript developers within the last few years. I set it up in my project and editor in a way that saving a file will format it automatically for me.
 
 </CardBody>
@@ -518,7 +518,7 @@ End-to-End tests, or also sometimes named e2e, are the set of tests that are the
 
 <Callout variant="info">
 
-If you're curious about cross-browser testing, [I wrote a blog post about it earlier this year](https://rashidtvmr.com/posts/running-cross-browser-cypress-github-ci) showcasing a very simple setup!
+If you're curious about cross-browser testing, [I wrote a blog post about it earlier this year](https://raashid.me/posts/running-cross-browser-cypress-github-ci) showcasing a very simple setup!
 
 </Callout>
 
@@ -567,7 +567,7 @@ This is the last and the most important piece of the CI/CD pipeline. Often enoug
 Nothing is more efficient than sitting in front of your computer and using your app with a screen reader, however, here are some tools that can be run as part of an automated CI/CD pipeline that I use to **guide the accessibility efforts**:
 
 - [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci): This is a suite of tools to help you audit performance, accessibility, and whether your app follows best practices. I use this tool to essentially **hold the line and ensure things do not get worse over time**. It allows you to put together "performance and accessibility budgets" and thresholds. It will fail in case your score goes below the targetted budget. This probably deserves an entire article on its own, but in the meantime you can check their documentation that contains sample Github Workflows and easily integrate it into your CI/CD pipeline.
-- [Cypress Axe](https://github.com/avanslaars/cypress-axe): This package works on top of Cypress and allows you to run a series of accessibility focused test suite. It helped me find some more complex accessibility issues that Lighthouse CI would skip. I wrote [a blog post about Cypress Axe last year](https://rashidtvmr.com/posts/automated-ui-accessibility-testing-with-cypress-cc2e38231241), and invite you to check it out if you want to learn more about it.
+- [Cypress Axe](https://github.com/avanslaars/cypress-axe): This package works on top of Cypress and allows you to run a series of accessibility focused test suite. It helped me find some more complex accessibility issues that Lighthouse CI would skip. I wrote [a blog post about Cypress Axe last year](https://raashid.me/posts/automated-ui-accessibility-testing-with-cypress-cc2e38231241), and invite you to check it out if you want to learn more about it.
 
 <Card title="Tools I use" style={{marginBottom: "2.25rem"}}>
 <CardBody>

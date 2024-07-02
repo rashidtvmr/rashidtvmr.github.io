@@ -31,7 +31,7 @@ const StaticSearchResults = (props: StaticSearchResultsProps) => {
       switch (event.key) {
         case 'Enter':
           const href = selectedResult.url.replace(
-            'https://rashidtvmr.com',
+            'https://raashid.me',
             ''
           );
           router.push(href).then(() => window.scrollTo(0, 0));
@@ -90,7 +90,7 @@ const StaticSearchResults = (props: StaticSearchResultsProps) => {
             onPointerEnter={() => handlePointer(index)}
           >
             <Link
-              href={result.url.replace('https://rashidtvmr.com', '')}
+              href={result.url.replace('https://raashid.me', '')}
               onClick={() => setTimeout(onClose, 600)}
             >
               {result.title}

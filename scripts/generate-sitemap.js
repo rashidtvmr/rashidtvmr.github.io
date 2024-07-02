@@ -34,7 +34,7 @@ const prettier = require('prettier');
 
         return `
                         <url>
-                            <loc>${`https://rashidtvmr.com${route}/`}</loc>
+                            <loc>${`https://raashid.me${route}/`}</loc>
                             <changefreq>daily</changefreq>
                             <priority>0.7</priority>
                         </url>
