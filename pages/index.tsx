@@ -1,34 +1,34 @@
 /* eslint-disable react/no-unescaped-entities */
 import {
-  styled,
-  Anchor,
-  Box,
+  // styled,
+  // Anchor,
+  // Box,
   Button,
-  Card,
+  // Card,
   Flex,
   Grid,
   Icon,
   Text,
   VisuallyHidden,
   H1,
-  H2,
-  H3,
+  // H2,
+  // H3,
 } from '@maximeheckel/design-system';
-import { format } from 'date-fns';
-import { motion, MotionProps } from 'framer-motion';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
+// import { format } from 'date-fns';
+import { motion } from 'framer-motion';
+// import dynamic from 'next/dynamic';
+// import Link from 'next/link';
 import Layout from '@core/layout';
 import { getAllFilesFrontMatter } from 'lib/mdx';
-import { Post } from 'types/post';
+// import { Post } from 'types/post';
 import React from 'react';
 import { templateColumnsMedium } from 'styles/grid';
 
-const NewsletterForm = dynamic(() => import('@core/components/NewsletterForm'));
+// const NewsletterForm = dynamic(() => import('@core/components/NewsletterForm'));
 
-interface Props {
-  posts: Post[];
-}
+// interface Props {
+//   posts: Post[];
+// }
 
 const WavingHand = () => (
   <motion.div
@@ -53,34 +53,34 @@ const WavingHand = () => (
   </motion.div>
 );
 
-let year = 0;
+// let year = 0;
 
-const cardVariants = {
-  hover: {
-    scale: 1.05,
-  },
-  initial: {
-    scale: 1,
-  },
-};
+// const cardVariants = {
+//   hover: {
+//     scale: 1.05,
+//   },
+//   initial: {
+//     scale: 1,
+//   },
+// };
 
-const glowVariants = {
-  hover: {
-    opacity: 0.8,
-  },
-  initial: {
-    scale: 1.05,
-    opacity: 0,
-  },
-};
+// const glowVariants = {
+//   hover: {
+//     opacity: 0.8,
+//   },
+//   initial: {
+//     scale: 1.05,
+//     opacity: 0,
+//   },
+// };
 
-const IndexPage = (props: Props) => {
-  const { posts } = props;
+const IndexPage = () => {
+  // const { posts } = props;
 
   return (
     <Layout footer header headerProps={{ offsetHeight: 256 }}>
       <Grid gapX={4} gapY={40} templateColumns={templateColumnsMedium}>
-        <Grid.Item col={2} >
+        <Grid.Item col={2}>
           <Flex alignItems="start" direction="column" gap="5">
             <H1>
               Hi <WavingHand /> I'm Rashid, and this is my blog.{' '}
@@ -93,8 +93,9 @@ const IndexPage = (props: Props) => {
                 size="7"
                 weight="4"
               >
-                Here, I share my experience as a frontend
-                engineer and everything I'm learning about on Javascript, Animation, React, Framer Motion and more.
+                Here, I share my experience as a frontend engineer and
+                everything I'm learning about JavaScript, animation, React,
+                Framer Motion, and more.
               </Text>
             </H1>
             <Flex
@@ -142,8 +143,6 @@ const IndexPage = (props: Props) => {
             <NewsletterForm large />
           </Flex>
         </Grid.Item> */}
-
-
       </Grid>
     </Layout>
   );
@@ -155,41 +154,41 @@ export async function getStaticProps() {
   return { props: { posts } };
 }
 
-const Glow = styled(motion.div, {
-  position: 'absolute',
-  top: '0',
-  left: '0',
-  width: '100%',
-  height: '100%',
-  webkitFilter: 'blur(15px)',
-  filter: 'blur(15px)',
-  borderRadius: 'var(--border-radius-2)',
-});
+// const Glow = styled(motion.div, {
+//   position: 'absolute',
+//   top: '0',
+//   left: '0',
+//   width: '100%',
+//   height: '100%',
+//   webkitFilter: 'blur(15px)',
+//   filter: 'blur(15px)',
+//   borderRadius: 'var(--border-radius-2)',
+// });
 
-const Block = styled(Box, {
-  display: 'flex',
-  justifyContent: 'flex-start',
-  alignItems: 'start',
-  width: '100%',
-  borderRadius: 'var(--border-radius-2)',
-  marginLeft: '-8px',
-  padding: '16px 8px',
-  boxShadow: 'none',
-  backgroundColor: 'var(--article-block-background-color, "transparent")',
-  color: 'var(--article-block-color, var(--text-primary))',
-  transition: 'background-color 0.25s, box-shadow 0.25s, color 0.25s',
+// const Block = styled(Box, {
+//   display: 'flex',
+//   justifyContent: 'flex-start',
+//   alignItems: 'start',
+//   width: '100%',
+//   borderRadius: 'var(--border-radius-2)',
+//   marginLeft: '-8px',
+//   padding: '16px 8px',
+//   boxShadow: 'none',
+//   backgroundColor: 'var(--article-block-background-color, "transparent")',
+//   color: 'var(--article-block-color, var(--text-primary))',
+//   transition: 'background-color 0.25s, box-shadow 0.25s, color 0.25s',
 
-  '&:focus': {
-    '--article-block-background-color': 'var(--emphasis)',
-    '--article-block-color': 'var(--accent)',
-  },
+//   '&:focus': {
+//     '--article-block-background-color': 'var(--emphasis)',
+//     '--article-block-color': 'var(--accent)',
+//   },
 
-  '@media (hover: hover) and (pointer: fine)': {
-    '&:hover': {
-      '--article-block-background-color': 'var(--emphasis)',
-      '--article-block-color': 'var(--accent)',
-    },
-  },
-});
+//   '@media (hover: hover) and (pointer: fine)': {
+//     '&:hover': {
+//       '--article-block-background-color': 'var(--emphasis)',
+//       '--article-block-color': 'var(--accent)',
+//     },
+//   },
+// });
 
 export default IndexPage;

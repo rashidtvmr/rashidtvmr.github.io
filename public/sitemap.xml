@@ -72,9 +72,7 @@
   </url>
 
   <url>
-    <loc
-      >https://raashid.me/posts/building-a-design-system-from-scratch/</loc
-    >
+    <loc>https://raashid.me/posts/building-a-design-system-from-scratch/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -176,9 +174,7 @@
   </url>
 
   <url>
-    <loc
-      >https://raashid.me/posts/guide-to-cicd-for-frontend-developers/</loc
-    >
+    <loc>https://raashid.me/posts/guide-to-cicd-for-frontend-developers/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -290,9 +286,7 @@
   </url>
 
   <url>
-    <loc
-      >https://raashid.me/posts/running-cross-browser-cypress-github-ci/</loc
-    >
+    <loc>https://raashid.me/posts/running-cross-browser-cypress-github-ci/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -356,9 +350,7 @@
   </url>
 
   <url>
-    <loc
-      >https://raashid.me/posts/the-physics-behind-spring-animations/</loc
-    >
+    <loc>https://raashid.me/posts/the-physics-behind-spring-animations/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>

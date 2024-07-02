@@ -22,9 +22,9 @@ import { HeaderProps } from './types';
 import { templateColumnsMedium } from 'styles/grid';
 
 // TODO Abstract these out
-const CommandCenterButton = dynamic(
-  () => import('../Buttons/CommandCenterButton')
-);
+// const CommandCenterButton = dynamic(
+//   () => import('../Buttons/CommandCenterButton')
+// );
 const LightDarkSwitcher = dynamic(() => import('../Buttons/LightDarkSwitcher'));
 const Search = dynamic(() => import('../Search'));
 
