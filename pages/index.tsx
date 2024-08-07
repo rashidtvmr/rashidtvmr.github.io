@@ -107,7 +107,7 @@ const IndexPage = () => {
               }}
             >
               <a
-                href="https://untools.io"
+                href="/posts/resume/"
                 style={{ textDecoration: 'none' }}
                 tabIndex={-1}
               >
@@ -115,11 +115,9 @@ const IndexPage = () => {
                   variant="secondary"
                   endIcon={<Icon.External size="4" />}
                 >
-                  My Other Site
+                  My resume
                 </Button>
-                <VisuallyHidden as="p">
-                  Link redirects to my other site https://untools.io.
-                </VisuallyHidden>
+                <VisuallyHidden as="p">Link to my resume</VisuallyHidden>
               </a>
               <a
                 href="https://twitter.com/rashidtvmr"
@@ -136,6 +134,9 @@ const IndexPage = () => {
               </a>
             </Flex>
           </Flex>
+        </Grid.Item>
+        <Grid.Item as="section" col={2}>
+          <div style={{ height: '200px' }}></div>
         </Grid.Item>
         {/* <Grid.Item as="section" col={2}>
           <Flex alignItems="start" direction="column" gap="5">

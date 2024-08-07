@@ -16,7 +16,7 @@ import Layout from '@core/layout';
 import TableOfContent from '@core/components/TableOfContent';
 import Seo from '@core/components/Seo';
 import { Post, ReadingTime } from 'types/post';
-import Signature from './Signature';
+// import Signature from './Signature';
 import { templateColumnsSmall } from 'styles/grid';
 
 interface WebmentionBlogDataProps {
@@ -179,7 +179,7 @@ const BlogLayout = ({ children, frontMatter, ogImage }: Props) => {
             </Flex>
           </Grid.Item>
         </Grid>
-        <Signature title={title} url={postUrl} />
+        {/* <Signature title={title} url={postUrl} /> */}
         <WebmentionBlogData date={date} postUrl={postUrl} subtitle={subtitle} />
       </article>
     </Layout>
