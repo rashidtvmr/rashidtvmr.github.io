@@ -50,7 +50,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         slug: p.replace(/\.mdx/, ''),
       },
     })),
-    fallback: true,
+    fallback: false, // changed from true to false for SSG export
   };
 };
 

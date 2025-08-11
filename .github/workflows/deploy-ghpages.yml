@@ -1,0 +1,90 @@
+name: Deploy Static Site to GitHub Pages Repo
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+# Required secrets (choose ONE method):
+# 1. GH_PAGES_DEPLOY_KEY  (SSH private key) OR
+# 2. GH_PAGES_TOKEN       (classic PAT with repo scope) OR a fine-grained PAT granting contents:write on target repo
+# Optional secret: CUSTOM_DOMAIN for CNAME (or set env below)
+
+env:
+  NODE_VERSION: 18
+  PNPM_VERSION: 8
+  TARGET_REPO: rashidtvmr/rashidtvmr.github.io
+  TARGET_BRANCH: main
+  # Set to your custom domain or leave blank. Can override via secret CUSTOM_DOMAIN.
+  DEFAULT_CUSTOM_DOMAIN: ''
+  # Disable AI/search features for static export
+  NEXT_PUBLIC_ENABLE_AI_SEARCH: 'false'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read  # for checkout
+      # 'contents: write' not needed because we push via PAT/SSH
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v3
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Build static export
+        run: |
+          STATIC_EXPORT=true pnpm build
+
+      - name: Add CNAME (optional)
+        if: env.DEFAULT_CUSTOM_DOMAIN != '' || secrets.CUSTOM_DOMAIN != ''
+        run: |
+          DOMAIN=${{ secrets.CUSTOM_DOMAIN || env.DEFAULT_CUSTOM_DOMAIN }}
+          if [ -n "$DOMAIN" ]; then
+            echo "$DOMAIN" > out/CNAME
+          fi
+
+      - name: Prepare deploy (git)
+        run: |
+          cd out
+          git init -b ${{ env.TARGET_BRANCH }}
+          git add .
+          git -c user.name="github-actions" -c user.email="actions@github.com" commit -m "Deploy: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+
+      - name: Deploy via SSH key
+        if: secrets.GH_PAGES_DEPLOY_KEY != ''
+        run: |
+          mkdir -p ~/.ssh
+            echo "${{ secrets.GH_PAGES_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+            chmod 600 ~/.ssh/id_rsa
+            ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+            cd out
+            git remote add origin git@github.com:${{ env.TARGET_REPO }}.git
+            git push -f origin ${{ env.TARGET_BRANCH }}
+
+      - name: Deploy via PAT
+        if: secrets.GH_PAGES_DEPLOY_KEY == '' && secrets.GH_PAGES_TOKEN != ''
+        run: |
+          cd out
+          git remote add origin https://${{ secrets.GH_PAGES_TOKEN }}@github.com/${{ env.TARGET_REPO }}.git
+          git push -f origin ${{ env.TARGET_BRANCH }}
+
+      - name: Fail if no credentials provided
+        if: secrets.GH_PAGES_DEPLOY_KEY == '' && secrets.GH_PAGES_TOKEN == ''
+        run: |
+          echo "Error: Provide GH_PAGES_DEPLOY_KEY or GH_PAGES_TOKEN secret." >&2
+          exit 1

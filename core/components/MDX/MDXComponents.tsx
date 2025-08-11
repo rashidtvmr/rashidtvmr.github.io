@@ -172,15 +172,24 @@ const ColorChannelSummary = dynamic(
     import('./Widgets/RefractionDispersionReactThreeFiber/ColorChannelSummary')
 );
 
-const CosineSimilarity = dynamic(
-  () => import('./Widgets/SemanticSearch/CosineSimilarity')
-);
+const enableAISearch = process.env.NEXT_PUBLIC_ENABLE_AI_SEARCH === 'true';
+const DisabledPlaceholder = () => null;
 
-const Formatting = dynamic(() => import('./Widgets/SemanticSearch/Formatting'));
+const CosineSimilarity = enableAISearch
+  ? dynamic(() => import('./Widgets/SemanticSearch/CosineSimilarity'))
+  : DisabledPlaceholder;
 
-const DemoSearch = dynamic(() => import('./Widgets/SemanticSearch/DemoSearch'));
+const Formatting = enableAISearch
+  ? dynamic(() => import('./Widgets/SemanticSearch/Formatting'))
+  : DisabledPlaceholder;
 
-const DemoButton = dynamic(() => import('./Widgets/SemanticSearch/DemoButton'));
+const DemoSearch = enableAISearch
+  ? dynamic(() => import('./Widgets/SemanticSearch/DemoSearch'))
+  : DisabledPlaceholder;
+
+const DemoButton = enableAISearch
+  ? dynamic(() => import('./Widgets/SemanticSearch/DemoButton'))
+  : DisabledPlaceholder;
 
 const RaymarchingVisualizer = dynamic(
   () => import('./Widgets/Raymarching/RaymarchingVisualizer')

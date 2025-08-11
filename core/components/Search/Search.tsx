@@ -20,7 +20,14 @@ interface Props {
   forceAIMode?: boolean;
 }
 
+const ENABLE_AI_SEARCH = process.env.NEXT_PUBLIC_ENABLE_AI_SEARCH === 'true';
+
 const Search = (props: Props) => {
+  if (!ENABLE_AI_SEARCH) {
+    // Feature disabled (e.g. static GitHub Pages export) => render nothing
+    return null;
+  }
+
   const { onClose, forceAIMode = false, open } = props;
 
   // Search Related states

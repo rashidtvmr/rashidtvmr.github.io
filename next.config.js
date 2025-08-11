@@ -4,9 +4,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
+const isStaticExport = process.env.STATIC_EXPORT === 'true';
+
 module.exports = withBundleAnalyzer({
   trailingSlash: true,
+  ...(isStaticExport ? { output: 'export' } : {}),
   images: {
+    ...(isStaticExport ? { unoptimized: true } : {}),
     remotePatterns: [
       {
         protocol: 'https',
