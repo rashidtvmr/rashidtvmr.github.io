@@ -5,29 +5,34 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
-# This simplified workflow uses only a Personal Access Token (GH_PAGES_TOKEN) secret.
-# Create a classic PAT (repo scope) or fine-grained PAT with contents:write on the pages repo.
-# Add it as a secret named GH_PAGES_TOKEN in this repository.
-# Optional: CUSTOM_DOMAIN secret for CNAME.
+env:
+  SOURCE_REPO: rashidtvmr/rashidtvmr.com
+  PAGES_REPO: rashidtvmr/rashidtvmr.github.io
+  NODE_VERSION: 18
+  PNPM_VERSION: 8
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source
+      - name: Checkout source repo
         uses: actions/checkout@v4
         with:
+          repository: ${{ env.SOURCE_REPO }}
           fetch-depth: 0
+          persist-credentials: false
+          submodules: false
+          token: ${{ secrets.GH_PAGES_TOKEN }}
 
       - name: Setup PNPM
         uses: pnpm/action-setup@v3
         with:
-          version: 8
+          version: ${{ env.PNPM_VERSION }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: ${{ env.NODE_VERSION }}
           cache: 'pnpm'
 
       - name: Install dependencies
@@ -35,7 +40,6 @@ jobs:
           if [ -f pnpm-lock.yaml ]; then
             pnpm install --frozen-lockfile
           else
-            echo "pnpm-lock.yaml not found, falling back to non-frozen install"
             pnpm install --no-frozen-lockfile
           fi
 
@@ -59,6 +63,7 @@ jobs:
           git checkout -b main
           git add .
           git -c user.name='github-actions' -c user.email='actions@github.com' commit -m "Deploy $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+
       - name: Push to pages repo (PAT)
         env:
           GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
@@ -68,5 +73,8 @@ jobs:
             exit 1
           fi
           cd out
-          git remote add origin https://$GH_PAGES_TOKEN@github.com/rashidtvmr/rashidtvmr.github.io.git
+          git remote add origin https://$GH_PAGES_TOKEN@github.com/${{ env.PAGES_REPO }}.git
           git push -f origin main
+
+      - name: Done
+        run: echo "Deployment complete."
