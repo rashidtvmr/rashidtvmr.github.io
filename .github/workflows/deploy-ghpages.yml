@@ -51,9 +51,9 @@ jobs:
           STATIC_EXPORT=true pnpm build
 
       - name: Add CNAME (optional)
-        if: env.DEFAULT_CUSTOM_DOMAIN != '' || secrets.CUSTOM_DOMAIN != ''
+        if: ${{ env.DEFAULT_CUSTOM_DOMAIN != '' || secrets.CUSTOM_DOMAIN != '' }}
         run: |
-          DOMAIN=${{ secrets.CUSTOM_DOMAIN || env.DEFAULT_CUSTOM_DOMAIN }}
+          DOMAIN=${{ secrets.CUSTOM_DOMAIN != '' && secrets.CUSTOM_DOMAIN || env.DEFAULT_CUSTOM_DOMAIN }}
           if [ -n "$DOMAIN" ]; then
             echo "$DOMAIN" > out/CNAME
           fi
@@ -66,25 +66,25 @@ jobs:
           git -c user.name="github-actions" -c user.email="actions@github.com" commit -m "Deploy: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
       - name: Deploy via SSH key
-        if: secrets.GH_PAGES_DEPLOY_KEY != ''
+        if: ${{ secrets.GH_PAGES_DEPLOY_KEY != '' }}
         run: |
           mkdir -p ~/.ssh
-            echo "${{ secrets.GH_PAGES_DEPLOY_KEY }}" > ~/.ssh/id_rsa
-            chmod 600 ~/.ssh/id_rsa
-            ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-            cd out
-            git remote add origin git@github.com:${{ env.TARGET_REPO }}.git
-            git push -f origin ${{ env.TARGET_BRANCH }}
+          echo "${{ secrets.GH_PAGES_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+          cd out
+          git remote add origin git@github.com:${{ env.TARGET_REPO }}.git
+          git push -f origin ${{ env.TARGET_BRANCH }}
 
       - name: Deploy via PAT
-        if: secrets.GH_PAGES_DEPLOY_KEY == '' && secrets.GH_PAGES_TOKEN != ''
+        if: ${{ secrets.GH_PAGES_DEPLOY_KEY == '' && secrets.GH_PAGES_TOKEN != '' }}
         run: |
           cd out
           git remote add origin https://${{ secrets.GH_PAGES_TOKEN }}@github.com/${{ env.TARGET_REPO }}.git
           git push -f origin ${{ env.TARGET_BRANCH }}
 
       - name: Fail if no credentials provided
-        if: secrets.GH_PAGES_DEPLOY_KEY == '' && secrets.GH_PAGES_TOKEN == ''
+        if: ${{ secrets.GH_PAGES_DEPLOY_KEY == '' && secrets.GH_PAGES_TOKEN == '' }}
         run: |
           echo "Error: Provide GH_PAGES_DEPLOY_KEY or GH_PAGES_TOKEN secret." >&2
           exit 1
