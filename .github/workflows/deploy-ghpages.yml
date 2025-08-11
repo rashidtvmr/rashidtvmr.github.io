@@ -18,11 +18,9 @@ jobs:
       - name: Checkout source repo
         uses: actions/checkout@v4
         with:
-          repository: ${{ env.SOURCE_REPO }}
           fetch-depth: 0
-          persist-credentials: false
           submodules: false
-          token: ${{ secrets.GH_PAGES_TOKEN }}
+          persist-credentials: true
 
       - name: Setup PNPM
         uses: pnpm/action-setup@v3
