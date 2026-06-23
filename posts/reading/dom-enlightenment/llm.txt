@@ -1,0 +1,11 @@
+# DOM Enlightenment: Exploring JavaScript and the Modern DOM
+
+>  Transforming Your Life Through Small Changes
+
+Keywords: frontend, frontend system design, react, microfrontends, javascript
+
+---
+
+# DOM Enlightenment: Exploring JavaScript and the Modern DOM
+
+🚧 Coming soon — this post is still in progress.

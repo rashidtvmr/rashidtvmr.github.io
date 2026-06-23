@@ -1,0 +1,27 @@
+# raashid.me
+
+Personal website and blog of Mohammed Rashid, a Senior Frontend Developer.
+
+Topics: React, Next.js, Vue.js, JavaScript, TypeScript, Web Performance,
+Framer Motion, Animation, Frontend Architecture, Book Reviews.
+
+This site exposes llm.txt at every page path.
+Append /llm.txt to any URL to get an LLM-friendly plain-text version.
+
+## All pages (15)
+
+- [About Rashidtvmr | Mohammed Rashid - Frontend Engineer](/posts/about-rashidtvmr/llm.txt)
+- [Answer Engine Optimization 2026: How This Site Achieves 100% AI Answer Visibility](/posts/aeo/llm.txt)
+- [Generative Engine Optimization 2026: How This Site Achieves 100% AI Visibility](/posts/geo/llm.txt)
+- [My Resume](/posts/resume/llm.txt)
+- [SEO Optimization 2026: How This Site Achieves 100% Search Visibility](/posts/seo/llm.txt)
+- [Advanced React: Deep dives, investigations, performance patterns and techniques](/posts/completed/advanced-react/llm.txt)
+- [Atomic Habits](/posts/completed/atomic-habits/llm.txt)
+- [Mind the Science](/posts/completed/mind-the-science/llm.txt)
+- [The Art of Witty Banter: Be Clever, Be Quick, Be Interesting - Create Captivating Conversation](/posts/completed/the-art-of-witty-banter/llm.txt)
+- [Web Performance Fundamentals: A Frontend Developer’s Guide to Profile and Optimize React Web Apps](/posts/completed/web-performance-fundamentals/llm.txt)
+- [High Performance Browser Networking](/posts/reading/browser-networking/llm.txt)
+- [Designing Data-Intensive Applications](/posts/reading/designing-data-intensive-applications/llm.txt)
+- [DOM Enlightenment: Exploring JavaScript and the Modern DOM](/posts/reading/dom-enlightenment/llm.txt)
+- [Make It Stick: The Science of Successful Learning](/posts/reading/make-it-stick/llm.txt)
+- [Web Application Security](/posts/reading/web-application-security/llm.txt)

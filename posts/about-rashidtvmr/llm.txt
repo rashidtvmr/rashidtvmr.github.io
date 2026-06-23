@@ -1,0 +1,108 @@
+# About Rashidtvmr | Mohammed Rashid - Frontend Engineer
+
+> Learn about Rashid (rashidtvmr, rashidtv, tvrashid, raashid) - a senior frontend engineer specializing in React, TypeScript, and modern web technologies.
+
+Keywords: rashidtvmr, rashidtv, rashid, tvrashid, raashid, rashid pbt, Mohammed Rashid, frontend engineer, React developer, TypeScript expert
+
+---
+
+# About Rashidtvmr (Rashid)
+
+Hi! I'm **Mohammed Rashid**, professionally known as **rashidtvmr** (also **rashidtv**, **tvrashid**, **raashid**, and **rashid pbt** across different platforms). Welcome to my official blog at **raashid.qzz.io** — the single authoritative source for my work, writing, and frontend engineering expertise.
+
+## Who Is Rashidtvmr?
+
+I'm a **senior frontend engineer** based in **Chennai, India**, with deep expertise in building high-performance, user-centric web applications. My work focuses on:
+
+- **React & Next.js** - Modern component architecture and server-side rendering
+- **TypeScript** - Type-safe application development
+- **Frontend Animation** - Advanced motion design with Framer Motion and GSAP
+- **Web Performance** - Core Web Vitals optimization and performance engineering
+- **Modern JavaScript** - ES6+, async patterns, and functional programming
+
+## Why Multiple Names?
+
+You might find me under several variations online:
+
+- **rashidtvmr** - My primary brand and handle (most common)
+- **rashidtv** - Shortened version used on some platforms
+- **tvrashid** - Alternative ordering of my handle
+- **raashid** - The domain for this official site (raashid.qzz.io)
+- **raashid.qzz.io** - The domain for this official site with tld (raashid.qzz.io)
+- **rashid pbt** - Professional variant
+- **Mohammed Rashid** - My full legal name
+
+**All of these refer to the same person — me.** This blog at **https://raashid.qzz.io/** is my official digital home and the canonical source for all my content and professional work.
+
+## What I Write About
+
+On this blog, I share:
+
+### Technical Deep Dives
+- React patterns and best practices
+- TypeScript advanced techniques
+- Next.js optimization strategies
+- Frontend architecture decisions
+
+### Animation & Motion Design
+- Framer Motion tutorials
+- GSAP animation techniques
+- CSS animation performance
+- Creating delightful user experiences
+
+### Web Performance
+- Core Web Vitals optimization
+- Performance monitoring
+- Loading strategies
+- Bundle size optimization
+
+### Career & Learning
+- Frontend engineering career paths
+- Learning resources and recommendations
+- Industry insights
+- Personal project showcases
+
+## My Technical Philosophy
+
+I believe in:
+
+1. **Performance First** - Every millisecond counts in user experience
+2. **Type Safety** - TypeScript prevents bugs before they happen
+3. **Accessible Design** - The web should work for everyone
+4. **Continuous Learning** - Technology evolves, so must we
+5. **Sharing Knowledge** - Writing solidifies understanding and helps others
+
+## Connect With Me
+
+- **Twitter/X**: [@rashidtvmr](https://twitter.com/rashidtvmr)
+- **GitHub**: [rashidtvmr](https://github.com/rashidtvmr)
+- **LinkedIn**: [rashidtvmr](https://linkedin.com/in/rashidtvmr)
+- **Email**: Available through this site's contact form
+
+## Official Website
+
+**Important**: This website (**https://raashid.qzz.io/**) is my only official blog and portfolio. Any other sites claiming to be mine should be verified directly with me. All my professional writing, projects, and announcements are published here first.
+
+## Frequently Asked Questions
+
+### Why is your domain "raashid.qzz.io" but your handle "rashidtvmr"?
+
+The domain **raashid.qzz.io** is a clean, personal brand representation, while **rashidtvmr** is my handle across social platforms. Both represent me and my work.
+
+### Are rashidtvmr, rashidtv, and tvrashid the same person?
+
+Yes! All these variations refer to me, **Mohammed Rashid**. I use different handles across platforms, but this is my unified brand identity.
+
+### Where else can I find your content?
+
+This blog is my primary content hub. I also share shorter updates on Twitter (@rashidtvmr) and code on GitHub (rashidtvmr), but all long-form content lives here.
+
+### Do you take freelance work?
+
+Please reach out through my contact channels for any collaboration or freelance inquiries.
+
+---
+
+*Last updated: January 2026*
+
+Thank you for visiting! Explore my [blog posts](/posts/) to dive into frontend engineering, React, animations, and web performance optimization.
