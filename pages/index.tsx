@@ -10,10 +10,12 @@ import {
 } from '@maximeheckel/design-system';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Head from 'next/head';
 import Layout from '@core/layout';
 import StickyProjectsSection from '@core/components/StickyProjects/StickyProjectsSection';
 import BookShelf from '@core/components/BookShelf/BookShelf';
 import { getAllFilesFrontMatter, getBooks } from 'lib/mdx';
+import { generateFAQPageSchema, generateBreadcrumbSchema } from 'lib/seo';
 import React from 'react';
 import { templateColumnsMedium } from 'styles/grid';
 import { Book } from 'types/post';
@@ -47,13 +49,61 @@ interface Props {
 }
 
 const IndexPage = ({ completedBooks, readingBooks }: Props) => {
+  const faqSchema = generateFAQPageSchema([
+    {
+      question: 'What is this website about?',
+      answer:
+        'This is the official blog of Mohammed Rashid (rashidtvmr), a senior frontend engineer in Chennai, India. It covers React, TypeScript, web performance, animation, and modern web development.',
+    },
+    {
+      question: 'Who is Rashidtvmr?',
+      answer:
+        'Mohammed Rashid, known as rashidtvmr, is a senior frontend engineer specializing in React, TypeScript, Next.js, and web performance optimization.',
+    },
+    {
+      question: 'What technologies does this site use?',
+      answer:
+        'Next.js 14 (Pages Router), TypeScript, MDX for content, Stitches CSS-in-JS, and static export for optimal performance.',
+    },
+    {
+      question: 'How is this site optimized for SEO and AI?',
+      answer:
+        'Through static generation, JSON-LD structured data, Core Web Vitals, sitemaps, answer-first content, FAQPage schema, AI crawler access, and llms.txt.',
+    },
+    {
+      question: 'Where is Rashidtvmr based?',
+      answer:
+        'Chennai, India. He works as a senior frontend engineer focused on modern web technologies.',
+    },
+    {
+      question: 'How can I contact Rashidtvmr?',
+      answer:
+        'Email hi@raashid.qzz.io, Twitter @rashidtvmr, or via GitHub and LinkedIn links in the footer.',
+    },
+  ]);
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://raashid.qzz.io/' },
+    { name: 'Blog', url: 'https://raashid.qzz.io/posts/' },
+  ]);
+
   return (
     <Layout footer header headerProps={{ offsetHeight: 256 }}>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      </Head>
       <Grid gapX={4} gapY={40} templateColumns={templateColumnsMedium}>
         <Grid.Item col={2}>
           <Flex alignItems="start" direction="column" gap="5">
             <H1>
-              Hi <WavingHand /> I'm Rashid, a frontend engineer focused on
+              Hi <WavingHand /> I&apos;m Rashid, a frontend engineer focused on
               building thoughtful, performant web experiences.{' '}
               <Text
                 css={{
@@ -65,9 +115,9 @@ const IndexPage = ({ completedBooks, readingBooks }: Props) => {
                 weight="4"
               >
                 Here, I share my experience as a frontend engineer along with
-                insights from what I'm learning in JavaScript, animation, React,
+                insights from what I&apos;m learning in JavaScript, animation, React,
                 Framer Motion, and modern frontend development. I also write
-                about key takeaways from books I've recently read. Click on any
+                about key takeaways from books I&apos;ve recently read. Click on any
                 book cover in the <strong>Completed</strong> section below to
                 explore articles inspired by that book.
               </Text>

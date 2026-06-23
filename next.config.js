@@ -53,10 +53,10 @@ module.exports = withBundleAnalyzer({
         has: [
           {
             type: 'host',
-            value: 'www.raashid.me',
+            value: 'www.raashid.qzz.io',
           },
         ],
-        destination: 'https://raashid.me/:path*',
+        destination: 'https://raashid.qzz.io/:path*',
         permanent: true,
       },
       // Redirect common brand domain typos/variants to canonical
@@ -68,7 +68,7 @@ module.exports = withBundleAnalyzer({
             value: '(?:rashidtvmr|rashidtv|tvrashid|rashid-pbt)\\.(?:com|net|org|me)',
           },
         ],
-        destination: 'https://raashid.me/:path*',
+        destination: 'https://raashid.qzz.io/:path*',
         permanent: true,
       },
     ];
@@ -81,7 +81,7 @@ module.exports = withBundleAnalyzer({
           ...securityHeaders,
           {
             key: 'Link',
-            value: '<https://raashid.me>; rel="canonical"',
+            value: '<https://raashid.qzz.io>; rel="canonical"',
           },
         ],
       },

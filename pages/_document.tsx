@@ -3,35 +3,32 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import Script from 'next/script';
 import {
   generatePersonSchema,
+  generateOrganizationSchema,
   generateWebsiteSchema,
   generateBlogSchema,
+  generateCombinedSchema,
 } from '../lib/seo';
 
 class MyDocument extends Document {
   render() {
-    const personSchema = generatePersonSchema();
-    const websiteSchema = generateWebsiteSchema();
-    const blogSchema = generateBlogSchema();
+    const rootSchema = generateCombinedSchema([
+      generatePersonSchema(),
+      generateOrganizationSchema(),
+      generateWebsiteSchema(),
+      generateBlogSchema(),
+    ]);
 
     return (
       <Html lang="en" className="maximeheckel-light">
         <Head>
-          {/* Schema.org structured data */}
+          {/* Schema.org structured data - combined @graph */}
           <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-          />
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-          />
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(rootSchema) }}
           />
 
           {/* Canonical URL - enforced globally */}
-          <link rel="canonical" href="https://raashid.me/" />
+          <link rel="canonical" href="https://raashid.qzz.io/" />
 
           <link
             rel="preload"

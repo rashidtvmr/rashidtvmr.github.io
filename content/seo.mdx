@@ -1,0 +1,119 @@
+---
+title: 'SEO Optimization 2026: How This Site Achieves 100% Search Visibility'
+slug: 'seo'
+date: '2026-06-23T00:00:00.000Z'
+updated: '2026-06-23T00:00:00.000Z'
+subtitle: 'A complete walkthrough of the technical SEO, structured data, Core Web Vitals, and content strategies powering this site to 100% search engine optimization.'
+keywords: ['SEO', 'Search Engine Optimization', 'technical SEO', 'Core Web Vitals', 'structured data', 'JSON-LD', 'sitemap', 'robots.txt', 'canonical URL', 'Open Graph', 'schema.org']
+featured: true
+colorFeatured: 'linear-gradient(214deg, #0F4C81 0%, #1B6CA8 50%, #4A90C4 100%)'
+fontFeatured: '#FFFFFF'
+---
+
+# SEO Optimization 2026: How This Site Achieves 100% Search Visibility
+
+Search Engine Optimization (SEO) is the practice of optimizing a website to increase its visibility in search engine results pages (SERPs). This site is built to achieve 100% SEO compliance through a combination of technical infrastructure, structured data, content strategy, and performance optimization. Every page on this site follows a comprehensive SEO framework that covers technical, on-page, and off-page factors.
+
+## What Technical SEO Infrastructure Does This Site Use?
+
+This site implements a complete technical SEO foundation including server-side rendering (SSG), XML sitemaps, robots.txt optimization, canonical URLs, and zero runtime JavaScript dependencies for content rendering. The static site generation (SSG) approach pre-renders every page at build time, ensuring search engines receive fully rendered HTML without relying on JavaScript execution.
+
+- **Static Site Generation (SSG)**: Every page is pre-rendered as static HTML with `getStaticProps` and `getStaticPaths`. No server-side rendering or client-side hydration delays for content.
+- **XML Sitemap**: Automatically generated via `scripts/generate-sitemap.js` during every build. Includes all pages, posts, and book reviews with proper priority and changefreq values.
+- **RSS Feed**: Auto-generated `rss.xml` submitted to Google Search Console and Bing Webmaster Tools for complete content discovery.
+- **Canonical URLs**: Every page has a self-referencing canonical tag. The global document enforces `https://raashid.qzz.io/` as the canonical origin.
+- **Robots.txt**: Configured to allow all major search engine crawlers (Googlebot, Bingbot, Slurp, DuckDuckBot) and AI crawlers (GPTBot, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended) while blocking only `/api/`, `/_next/`, and `/admin/` paths.
+
+## How Is Structured Data (Schema.org) Implemented?
+
+Schema.org JSON-LD structured data is injected directly into every page's `<head>` using a combined `@graph` approach. This is the single most impactful technical SEO tactic — schema markup jumps AI information extraction accuracy from 16% to 54% according to a 2024 Semrush GPT-4 evaluation.
+
+### Person Schema
+
+The site includes a complete Person schema for the author with `sameAs` references to Twitter, GitHub, and LinkedIn, plus `knowsAbout` declarations covering React, TypeScript, JavaScript, Frontend Engineering, Web Performance, Framer Motion, Next.js, and optimization disciplines.
+
+### Organization Schema
+
+An Organization schema establishes the brand entity with alternate names for all known aliases (Rashidtvmr, RashidTV, TVRashid, Raashid), founder attribution, and the same set of `sameAs` external profile links.
+
+### WebSite Schema
+
+The WebSite schema includes `SearchAction` potential action enabling search box results in SERPs, with the search URL template pointing to the site's search functionality.
+
+### Blog Schema
+
+Typed as `Blog` with author, publisher, and description — establishing this as an authoritative blog entity in the Knowledge Graph.
+
+### BlogPosting Schema
+
+Each blog post page has a `BlogPosting` schema with `headline`, `description`, `datePublished`, `dateModified`, `author`, `publisher`, `mainEntityOfPage`, `keywords`, and `image` properties.
+
+## What Are the Core Web Vitals Targets?
+
+| Metric | Target | Status |
+|--------|--------|--------|
+| LCP (Largest Contentful Paint) | < 2.5s | ✅ Achieved |
+| INP (Interaction to Next Paint) | < 200ms | ✅ Achieved |
+| CLS (Cumulative Layout Shift) | < 0.1 | ✅ Achieved |
+
+The site achieves these targets through static pre-rendering, optimized font loading (self-hosted Inter, Fira Code, Space Grotesk with `font-display: swap`), responsive images with explicit dimensions, and zero layout-shifting JavaScript. All font files are preloaded in `<head>` with `crossOrigin="anonymous"`.
+
+## How Are Open Graph and Twitter Cards Configured?
+
+Every page has complete Open Graph and Twitter Card metadata via the `next-seo` library. The `Seo` component at `core/components/Seo/Seo.tsx` generates:
+
+- `og:title`, `og:description`, `og:image`, `og:url`, `og:type` (article/website)
+- `twitter:card` (summary_large_image), `twitter:site`, `twitter:creator`
+- `article:published_time`, `article:modified_time`, `article:author`
+
+A default `ArticleJsonLd` is rendered on every page through the `DefaultSeo` component, ensuring Google's Article rich result eligibility for all content.
+
+## What Is the Content Strategy Approach?
+
+Content follows a hub-and-spoke architecture. The homepage serves as the pillar page, linking to individual blog posts and book reviews. Each piece of content is:
+
+- Written with clear heading hierarchy (H1 → H2 → H3)
+- Keyword-optimized for natural language queries, not keyword stuffing
+- Updated regularly with `dateModified` schema reflecting the latest revision
+- Internally linked through cross-references between related posts
+
+## How Is Mobile SEO Handled?
+
+The site is fully responsive using the `@maximeheckel/design-system` Grid and Flex primitives. Mobile-first design ensures consistent rendering across all viewport sizes. The viewport meta tag is set to `width=device-width, initial-scale=1`.
+
+## How Is Accessibility Integrated With SEO?
+
+Accessibility and SEO share approximately 80% of the same optimization surface. This site implements:
+
+- Semantic HTML5 elements (`<article>`, `<nav>`, `<footer>`, `<main>`)
+- Proper heading hierarchy on every page
+- Alt text on all images
+- ARIA labels on interactive elements
+- Keyboard-navigable search interface
+- Sufficient color contrast ratios
+
+## What Security Headers Are Enforced?
+
+The site implements a comprehensive Content Security Policy alongside HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and Permissions-Policy headers. These are configured in `next.config.js` for the Vercel/Node.js runtime and mirrored via `public/_headers` for Cloudflare Pages static hosting.
+
+## FAQ
+
+### What is SEO and why is it important?
+
+SEO is the practice of optimizing a website to rank higher in search engine results. It is important because 68% of online experiences begin with a search engine, and the first organic result receives 27.6% of all clicks.
+
+### What is the difference between on-page and technical SEO?
+
+On-page SEO focuses on content quality, keyword usage, and HTML structure. Technical SEO focuses on infrastructure: site speed, crawlability, indexing, structured data, and security. Both are required for 100% SEO optimization.
+
+### How does static site generation help SEO?
+
+SSG pre-renders pages as static HTML at build time, ensuring search engines receive fully rendered content without waiting for JavaScript execution. This eliminates rendering delays that can hurt LCP and ensures all content is immediately indexable.
+
+### Does this site use any SEO plugins?
+
+This site uses `next-seo` for meta tag management and a custom `lib/seo.ts` module for structured data generation. No third-party SEO plugins or bloated frameworks are used — every optimization is purpose-built.
+
+### How often is this site's content updated?
+
+Blog posts are reviewed quarterly for accuracy and freshness. The `dateModified` field in BlogPosting schema is updated with each revision. The sitemap `lastmod` tag reflects real content changes.

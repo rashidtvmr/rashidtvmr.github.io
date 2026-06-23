@@ -1,0 +1,9 @@
+# Cloudflare Pages _redirects
+# www → non-www (handled by Cloudflare's proxy when domain is added in CF dashboard)
+# Next.js redirects are not applied in static export, so mirror them here:
+# Redirect common brand domain typos/variants to canonical
+https://rashidtvmr.com/*      https://raashid.qzz.io/:splat    301
+https://www.rashidtvmr.com/*  https://raashid.qzz.io/:splat    301
+https://rashidtv.com/*        https://raashid.qzz.io/:splat    301
+https://tvrashid.com/*        https://raashid.qzz.io/:splat    301
+https://rashid-pbt.com/*      https://raashid.qzz.io/:splat    301

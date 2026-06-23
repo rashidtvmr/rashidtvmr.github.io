@@ -1,4 +1,4 @@
-name: Deploy Next.js static export to GitHub Pages (same repo)
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -16,7 +16,9 @@ concurrency:
 
 jobs:
   build:
-    if: github.repository == 'rashidtvmr/rashidtvmr.github.io'
+    if: >
+      github.repository == 'rashidtvmr/rashidtvmr.com' ||
+      github.repository == 'rashidtvmr/rashidtvmr.github.io'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -45,6 +47,7 @@ jobs:
       - name: Build (static export)
         env:
           STATIC_EXPORT: 'true'
+          NEXT_PUBLIC_STATIC_EXPORT: 'true'
           NEXT_PUBLIC_ENABLE_AI_SEARCH: 'false'
         run: pnpm build
 
@@ -57,7 +60,9 @@ jobs:
           path: out
 
   deploy:
-    if: github.repository == 'rashidtvmr/rashidtvmr.github.io'
+    if: >
+      github.repository == 'rashidtvmr/rashidtvmr.com' ||
+      github.repository == 'rashidtvmr/rashidtvmr.github.io'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

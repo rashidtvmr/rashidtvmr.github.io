@@ -187,7 +187,7 @@ const CommandCenterStatic = (props: CommandCenterStaticProps) => {
           key="email-link"
         >
           <a
-            href="mailto:hi@raashid.me"
+            href="mailto:hi@raashid.qzz.io"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -195,7 +195,7 @@ const CommandCenterStatic = (props: CommandCenterStaticProps) => {
             <span style={{ marginLeft: '15px' }}>Contact</span>
             <VisuallyHidden as="p">
               Link opens your default mail client with my email address
-              hi@raashid.me prefilled.
+              hi@raashid.qzz.io prefilled.
             </VisuallyHidden>
           </a>
         </S.Item>

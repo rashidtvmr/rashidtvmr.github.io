@@ -26,8 +26,33 @@ export const generatePersonSchema = () => {
       'Web Performance',
       'Framer Motion',
       'Next.js',
+      'Search Engine Optimization',
+      'Answer Engine Optimization',
+      'Generative Engine Optimization',
     ],
     description: siteConfig.twitterDesc,
+  };
+};
+
+export const generateOrganizationSchema = () => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Rashidtvmr',
+    alternateName: siteConfig.authorAliases,
+    url: siteConfig.siteUrl,
+    logo: siteConfig.image,
+    image: siteConfig.image,
+    description: siteConfig.description,
+    sameAs: [
+      `https://twitter.com/${siteConfig.twitter.replace('@', '')}`,
+      'https://github.com/rashidtvmr',
+      'https://linkedin.com/in/rashidtvmr',
+    ],
+    founder: {
+      '@type': 'Person',
+      name: siteConfig.author,
+    },
   };
 };
 
@@ -126,6 +151,30 @@ export const generateBreadcrumbSchema = (
       name: item.name,
       item: item.url,
     })),
+  };
+};
+
+export const generateFAQPageSchema = (
+  questions: { question: string; answer: string }[]
+) => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: questions.map((q) => ({
+      '@type': 'Question',
+      name: q.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: q.answer,
+      },
+    })),
+  };
+};
+
+export const generateCombinedSchema = (schemas: Record<string, unknown>[]) => {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': schemas,
   };
 };
 

@@ -1,0 +1,30 @@
+# Rashidtvmr's Blog
+> Personal blog and portfolio of Mohammed Rashid (rashidtvmr) — Senior Frontend Engineer specializing in React, TypeScript, web performance, and modern frontend architecture.
+
+## About
+- Site: https://raashid.qzz.io
+- Author: Mohammed Rashid (rashidtvmr)
+- Location: Chennai, India
+- Expertise: React, TypeScript, JavaScript, Frontend Engineering, Web Performance, Framer Motion, Next.js
+
+## Core Pages
+- Home: https://raashid.qzz.io/
+- About: https://raashid.qzz.io/posts/about-rashidtvmr
+- Resume: https://raashid.qzz.io/posts/resume
+- RSS Feed: https://raashid.qzz.io/rss.xml
+
+## Blog Posts
+- Advanced React Patterns: https://raashid.qzz.io/posts/completed/advanced-react
+- Atomic Habits: https://raashid.qzz.io/posts/completed/atomic-habits
+- Mind the Science: https://raashid.qzz.io/posts/completed/mind-the-science
+- The Art of Witty Banter: https://raashid.qzz.io/posts/completed/the-art-of-witty-banter
+- Web Performance Fundamentals: https://raashid.qzz.io/posts/completed/web-performance-fundamentals
+- Browser Networking: https://raashid.qzz.io/posts/reading/browser-networking
+- Designing Data-Intensive Applications: https://raashid.qzz.io/posts/reading/designing-data-intensive-applications
+- DOM Enlightenment: https://raashid.qzz.io/posts/reading/dom-enlightenment
+- Make It Stick: https://raashid.qzz.io/posts/reading/make-it-stick
+
+## Social
+- Twitter/X: https://twitter.com/rashidtvmr
+- GitHub: https://github.com/rashidtvmr
+- LinkedIn: https://linkedin.com/in/rashidtvmr

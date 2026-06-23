@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import {
@@ -8,6 +9,18 @@ import {
 import { DefaultSeo } from '@core/components/Seo';
 import 'styles/global.css';
 import 'styles/font.css';
+
+const isStatic = process.env.NEXT_PUBLIC_STATIC_EXPORT === 'true';
+
+const Analytics = isStatic
+  ? () => null
+  : dynamic(
+      () =>
+        import('@vercel/analytics/react').then((m) => ({
+          default: m.Analytics,
+        })),
+      { ssr: false }
+    );
 
 const App = ({ Component, pageProps }: AppProps) => {
   globalStyles();
