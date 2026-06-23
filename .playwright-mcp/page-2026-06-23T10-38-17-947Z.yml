@@ -1,0 +1,118 @@
+- main [ref=e3]:
+  - link "Follow me on Twitter" [ref=e4] [cursor=pointer]:
+    - /url: https://twitter.com/rashidtvmr
+    - text: "@rashidtvmr"
+  - generic [ref=e7]:
+    - link "Home" [ref=e10] [cursor=pointer]:
+      - /url: /
+      - img "Logo" [ref=e11]
+    - button "Theme toggle" [ref=e17] [cursor=pointer]:
+      - img [ref=e19]
+  - generic [ref=e29]:
+    - heading "Hi 👋🏻 I’m Rashid, a frontend engineer focused on building thoughtful, performant web experiences. Here, I share my experience as a frontend engineer along with insights from what I’m learning in JavaScript, animation, React, Framer Motion, and modern frontend development. I also write about key takeaways from books I’ve recently read. Click on any book cover in the Completed section below to explore articles inspired by that book." [level=1] [ref=e30]:
+      - text: Hi
+      - generic [ref=e31]: 👋🏻
+      - text: I’m Rashid, a frontend engineer focused on building thoughtful, performant web experiences.
+      - generic [ref=e32]:
+        - text: Here, I share my experience as a frontend engineer along with insights from what I’m learning in JavaScript, animation, React, Framer Motion, and modern frontend development. I also write about key takeaways from books I’ve recently read. Click on any book cover in the
+        - strong [ref=e33]: Completed
+        - text: section below to explore articles inspired by that book.
+    - generic [ref=e34]:
+      - link "My resume External Arrow Link to my resume" [ref=e35] [cursor=pointer]:
+        - /url: /posts/resume/
+        - button "My resume External Arrow" [ref=e36]:
+          - text: My resume
+          - img "External Arrow" [ref=e38]
+        - paragraph [ref=e41]: Link to my resume
+      - link "@rashidtvmr Twitter Link redirects to my Twitter profile page https://twitter.com/rashidtvmr." [ref=e42] [cursor=pointer]:
+        - /url: https://twitter.com/rashidtvmr
+        - button "@rashidtvmr Twitter" [ref=e43]:
+          - text: "@rashidtvmr"
+          - img "Twitter" [ref=e45]
+        - paragraph [ref=e46]: Link redirects to my Twitter profile page https://twitter.com/rashidtvmr.
+  - generic [ref=e48]:
+    - generic [ref=e56]: Projects I've worked on
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - generic [ref=e59]: PureInsight™
+        - generic [ref=e60]: React
+        - generic [ref=e61]: "[2020-2026]"
+      - generic [ref=e62]:
+        - generic [ref=e63]: Tyme
+        - generic [ref=e64]: Frontend Architect (React)
+        - generic [ref=e65]: "[2025-2026]"
+      - generic [ref=e66]:
+        - generic [ref=e67]: Rialto
+        - generic [ref=e68]: React
+        - generic [ref=e69]: "[2025]"
+      - generic [ref=e70]:
+        - generic [ref=e71]: Keep Learning LMS
+        - generic [ref=e72]: React
+        - generic [ref=e73]: "[2022]"
+      - generic [ref=e74]:
+        - generic [ref=e75]: Pure Patient Direct
+        - generic [ref=e76]: React
+        - generic [ref=e77]: "[2023]"
+      - generic [ref=e78]:
+        - generic [ref=e79]: Pure Encapsulations Pro
+        - generic [ref=e80]: VueJS
+        - generic [ref=e81]: "[2023]"
+      - generic [ref=e82]:
+        - generic [ref=e83]: Shareandremember
+        - generic [ref=e84]: Frontend Team Lead
+        - generic [ref=e85]: "[2022-2023]"
+    - img "PureInsight™" [ref=e88]
+    - generic [ref=e90]: ↓ Scroll
+  - generic [ref=e91]:
+    - generic [ref=e93]:
+      - heading "Currently Reading" [level=2] [ref=e94]
+      - generic [ref=e95]:
+        - link "High Performance Browser Networking" [ref=e96] [cursor=pointer]:
+          - /url: /posts/reading/browser-networking/
+          - img "High Performance Browser Networking" [ref=e97]
+        - link "Designing Data-Intensive Applications" [ref=e98] [cursor=pointer]:
+          - /url: /posts/reading/designing-data-intensive-applications/
+          - img "Designing Data-Intensive Applications" [ref=e99]
+        - 'link "DOM Enlightenment: Exploring JavaScript and the Modern DOM" [ref=e100] [cursor=pointer]':
+          - /url: /posts/reading/dom-enlightenment/
+          - 'img "DOM Enlightenment: Exploring JavaScript and the Modern DOM" [ref=e101]'
+        - 'link "Make It Stick: The Science of Successful Learning" [ref=e102] [cursor=pointer]':
+          - /url: /posts/reading/make-it-stick/
+          - 'img "Make It Stick: The Science of Successful Learning" [ref=e103]'
+    - generic [ref=e105]:
+      - heading "Completed Books" [level=2] [ref=e106]
+      - generic [ref=e107]:
+        - 'link "Advanced React: Deep dives, investigations, performance patterns and techniques" [ref=e108] [cursor=pointer]':
+          - /url: /posts/completed/advanced-react/
+          - 'img "Advanced React: Deep dives, investigations, performance patterns and techniques" [ref=e109]'
+        - link "Atomic Habits" [ref=e110] [cursor=pointer]:
+          - /url: /posts/completed/atomic-habits/
+          - img "Atomic Habits" [ref=e111]
+        - link "Mind the Science" [ref=e112] [cursor=pointer]:
+          - /url: /posts/completed/mind-the-science/
+          - img "Mind the Science" [ref=e113]
+        - 'link "The Art of Witty Banter: Be Clever, Be Quick, Be Interesting - Create Captivating Conversation" [ref=e114] [cursor=pointer]':
+          - /url: /posts/completed/the-art-of-witty-banter/
+          - 'img "The Art of Witty Banter: Be Clever, Be Quick, Be Interesting - Create Captivating Conversation" [ref=e115]'
+        - 'link "Web Performance Fundamentals: A Frontend Developer’s Guide to Profile and Optimize React Web Apps" [ref=e116] [cursor=pointer]':
+          - /url: /posts/completed/web-performance-fundamentals/
+          - 'img "Web Performance Fundamentals: A Frontend Developer’s Guide to Profile and Optimize React Web Apps" [ref=e117]'
+  - generic [ref=e120]:
+    - generic [ref=e121]:
+      - generic [ref=e124]:
+        - link "Home" [ref=e125] [cursor=pointer]:
+          - /url: /
+        - link "RSS" [ref=e126] [cursor=pointer]:
+          - /url: /rss.xml
+      - generic [ref=e129]:
+        - link "Twitter" [ref=e130] [cursor=pointer]:
+          - /url: https://twitter.com/rashidtvmr
+        - link "Github" [ref=e131] [cursor=pointer]:
+          - /url: https://github.com/rashidtvmr
+        - link "Buy me a coffee" [ref=e132] [cursor=pointer]:
+          - /url: https://www.buymeacoffee.com/rashidtvmr
+    - generic [ref=e134]:
+      - paragraph [ref=e135]:
+        - text: © 2026 Rashidtvmr ——
+        - emphasis [ref=e136]: Chennai, India
+      - img "Rashidtvmr's logo" [ref=e137]

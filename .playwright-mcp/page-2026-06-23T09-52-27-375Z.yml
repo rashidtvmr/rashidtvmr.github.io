@@ -1,0 +1,84 @@
+- generic [active] [ref=e1]:
+  - main [ref=e3]:
+    - generic [ref=e6]:
+      - link "Home" [ref=e9] [cursor=pointer]:
+        - /url: /
+        - img "Logo" [ref=e10]
+      - button "Theme toggle" [ref=e16] [cursor=pointer]:
+        - img [ref=e18]
+    - generic [ref=e25]:
+      - generic [ref=e27]:
+        - heading "Hi 👋🏻 I’m Rashid, a frontend engineer focused on building thoughtful, performant web experiences. Here, I share my experience as a frontend engineer along with insights from what I’m learning in JavaScript, animation, React, Framer Motion, and modern frontend development. I also write about key takeaways from books I’ve recently read. Click on any book cover in the Completed section below to explore articles inspired by that book." [level=1] [ref=e28]:
+          - text: Hi
+          - generic [ref=e29]: 👋🏻
+          - text: I’m Rashid, a frontend engineer focused on building thoughtful, performant web experiences.
+          - generic [ref=e30]:
+            - text: Here, I share my experience as a frontend engineer along with insights from what I’m learning in JavaScript, animation, React, Framer Motion, and modern frontend development. I also write about key takeaways from books I’ve recently read. Click on any book cover in the
+            - strong [ref=e31]: Completed
+            - text: section below to explore articles inspired by that book.
+        - generic [ref=e32]:
+          - link "My resume External Arrow Link to my resume" [ref=e33] [cursor=pointer]:
+            - /url: /posts/resume/
+            - button "My resume External Arrow" [ref=e34]:
+              - text: My resume
+              - img "External Arrow" [ref=e36]
+            - paragraph [ref=e39]: Link to my resume
+          - link "@rashidtvmr Twitter Link redirects to my Twitter profile page https://twitter.com/rashidtvmr." [ref=e40] [cursor=pointer]:
+            - /url: https://twitter.com/rashidtvmr
+            - button "@rashidtvmr Twitter" [ref=e41]:
+              - text: "@rashidtvmr"
+              - img "Twitter" [ref=e43]
+            - paragraph [ref=e44]: Link redirects to my Twitter profile page https://twitter.com/rashidtvmr.
+      - generic [ref=e46]:
+        - heading "Currently Reading" [level=2] [ref=e47]
+        - generic [ref=e48]:
+          - link "High Performance Browser Networking" [ref=e49] [cursor=pointer]:
+            - /url: /posts/reading/browser-networking/
+            - img "High Performance Browser Networking" [ref=e50]
+          - link "Designing Data-Intensive Applications" [ref=e51] [cursor=pointer]:
+            - /url: /posts/reading/designing-data-intensive-applications/
+            - img "Designing Data-Intensive Applications" [ref=e52]
+          - 'link "DOM Enlightenment: Exploring JavaScript and the Modern DOM" [ref=e53] [cursor=pointer]':
+            - /url: /posts/reading/dom-enlightenment/
+            - 'img "DOM Enlightenment: Exploring JavaScript and the Modern DOM" [ref=e54]'
+          - 'link "Make It Stick: The Science of Successful Learning" [ref=e55] [cursor=pointer]':
+            - /url: /posts/reading/make-it-stick/
+            - 'img "Make It Stick: The Science of Successful Learning" [ref=e56]'
+      - generic [ref=e58]:
+        - heading "Completed Books" [level=2] [ref=e59]
+        - generic [ref=e60]:
+          - 'link "Advanced React: Deep dives, investigations, performance patterns and techniques" [ref=e61] [cursor=pointer]':
+            - /url: /posts/completed/advanced-react/
+            - 'img "Advanced React: Deep dives, investigations, performance patterns and techniques" [ref=e62]'
+          - link "Atomic Habits" [ref=e63] [cursor=pointer]:
+            - /url: /posts/completed/atomic-habits/
+            - img "Atomic Habits" [ref=e64]
+          - link "Mind the Science" [ref=e65] [cursor=pointer]:
+            - /url: /posts/completed/mind-the-science/
+            - img "Mind the Science" [ref=e66]
+          - 'link "The Art of Witty Banter: Be Clever, Be Quick, Be Interesting - Create Captivating Conversation" [ref=e67] [cursor=pointer]':
+            - /url: /posts/completed/the-art-of-witty-banter/
+            - 'img "The Art of Witty Banter: Be Clever, Be Quick, Be Interesting - Create Captivating Conversation" [ref=e68]'
+          - 'link "Web Performance Fundamentals: A Frontend Developer’s Guide to Profile and Optimize React Web Apps" [ref=e69] [cursor=pointer]':
+            - /url: /posts/completed/web-performance-fundamentals/
+            - 'img "Web Performance Fundamentals: A Frontend Developer’s Guide to Profile and Optimize React Web Apps" [ref=e70]'
+    - generic [ref=e73]:
+      - generic [ref=e74]:
+        - generic [ref=e77]:
+          - link "Home" [ref=e78] [cursor=pointer]:
+            - /url: /
+          - link "RSS" [ref=e79] [cursor=pointer]:
+            - /url: /rss.xml
+        - generic [ref=e82]:
+          - link "Twitter" [ref=e83] [cursor=pointer]:
+            - /url: https://twitter.com/rashidtvmr
+          - link "Github" [ref=e84] [cursor=pointer]:
+            - /url: https://github.com/rashidtvmr
+          - link "Buy me a coffee" [ref=e85] [cursor=pointer]:
+            - /url: https://www.buymeacoffee.com/rashidtvmr
+      - generic [ref=e87]:
+        - paragraph [ref=e88]:
+          - text: © 2026 Rashidtvmr ——
+          - emphasis [ref=e89]: Chennai, India
+        - img "Rashidtvmr's logo" [ref=e90]
+  - alert [ref=e95]
