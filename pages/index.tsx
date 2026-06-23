@@ -115,11 +115,11 @@ const IndexPage = ({ completedBooks, readingBooks }: Props) => {
                 weight="4"
               >
                 Here, I share my experience as a frontend engineer along with
-                insights from what I&apos;m learning in JavaScript, animation, React,
-                Framer Motion, and modern frontend development. I also write
-                about key takeaways from books I&apos;ve recently read. Click on any
-                book cover in the <strong>Completed</strong> section below to
-                explore articles inspired by that book.
+                insights from what I&apos;m learning in JavaScript, animation,{' '}
+                React, Framer Motion, and modern frontend development. I also
+                write about key takeaways from books I&apos;ve recently read.
+                Click on any book cover in the <strong>Completed</strong>{' '}
+                section below to explore articles inspired by that book.
               </Text>
             </H1>
 

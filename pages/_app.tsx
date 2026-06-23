@@ -38,6 +38,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Tooltip.Provider>
         <Component {...pageProps} />
       </Tooltip.Provider>
+      <Analytics />
     </ThemeProvider>
   );
 };
